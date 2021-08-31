@@ -1,0 +1,32 @@
+---
+- title: Flow TV - Live TV
+  cat_id: tv
+  data: media
+
+- title: Film, Serier, Musikvidoer o.l.
+  cat_id: movies
+  data: media
+
+- title: Musik, Podcasts, Radio o.l.
+  cat_id: sound
+  data: media
+
+- title: Lokale filer, netværk, stream o.l.
+  cat_id: local
+  data: apps
+
+- title: Spil
+  cat_id: games
+  data: games
+
+- title: Controller
+  cat_id: controllers
+  data: units
+
+- title: Apps
+  cat_id: apps
+  data: apps
+
+- title: Enheder, udstyr o.l.
+  cat_id: units
+  data: units

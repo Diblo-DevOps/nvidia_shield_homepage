@@ -1,0 +1,2 @@
+{% assign _part = include.href | slice: 0, 4 %}
+<a href="{{ include.href }}" title="{{ include.title | default: include.anchor }}"{% if _part == "http" %} target="_blank" rel="noopener"{% endif %}>{{ include.anchor }}</a>

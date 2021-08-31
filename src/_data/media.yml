@@ -1,0 +1,453 @@
+---
+- name: Apple TV inklusive Apple TV+
+  homepage: https://www.apple.com/dk/apple-tv-plus/
+  homepage_title: Apple TV+
+  app: true
+  live: false
+  cats:
+    - tv
+    - movies
+
+- name: Boxer Play
+  homepage: https://boxerplay.dk/
+  homepage_title: Boxer Play
+  app: false
+  cast: true
+  live: false
+  cats:
+    - tv
+    - movies
+
+- name: C More
+  homepage: https://www.cmore.dk/
+  homepage_title: C More
+  app: true
+  cast: true
+  live: false
+  cats:
+    - tv
+    - movies
+
+- name: Allente
+  homepage: https://tv.allente.dk/
+  homepage_title: Allente TV
+  app: false
+  cast: true
+  live: false
+  note: Tidligere Canal Digital GO
+  cats:
+    - tv
+    - movies
+
+- name: Discovery+
+  homepage: https://www.discoveryplus.dk/
+  homepage_title: Discovery+
+  app: true
+  cast: true
+  live: false
+  cats:
+    - tv
+    - movies
+
+- name: DRTV
+  homepage: https://www.dr.dk/
+  homepage_title: DR
+  app: true
+  cast: true
+  live: false
+  cats:
+    - tv
+    - movies
+
+- name: Eurosport Player
+  homepage: https://www.eurosportplayer.com/
+  homepage_title: Eurosport Player
+  app: true
+  cast: true
+  live: false
+  cats:
+    - tv
+    - movies
+
+- name: F1 TV
+  homepage: https://f1tv.formula1.com/
+  homepage_title: Formula 1
+  app: false
+  cast: true
+  live: false
+  note: Der er en unofficial app, men det er på eget ansvar.
+  cats:
+    - tv
+    - movies
+
+- name: Glenten Play (GPlay)
+  homepage: https://www.glenten.dk/Start-Web-TV
+  homepage_title: Gplay | Glentevejs antennelaug
+  app_link: https://play.google.com/store/apps/details?id=tv.watzmenow.glenten.player
+  app_link_title: Glenten Play
+  app: false
+  cast: true
+  live: false
+  note: Chromecast skal aktiveres ved Glentevejs Antennelaug
+  cats:
+    - tv
+    - movies
+
+- name: MORE TV
+  homepage: https://moretv.dk/
+  homepage_title: MORE TV
+  app_link: https://play.google.com/store/apps/details?id=com.infomir.ministraplayer
+  app_link_title: Ministra Player for Android TV and STB
+  app: true
+  cast: false
+  cats:
+    - tv
+
+- name: Stofa Webtv
+  homepage: https://www.stofa.dk/
+  homepage_title: "Stofa: WebTv"
+  app: false
+  cast: true
+  live: false
+  cats:
+    - tv
+    - movies
+
+- name: Telia TV
+  homepage: https://www.telia.dk/privat/abonnementer/tv/
+  homepage_title: Telia TV
+  app: false
+  cast: true
+  live: false
+  cats:
+    - tv
+    - movies
+
+- name: TV 2 Play
+  homepage: https://play.tv2.dk/
+  homepage_title: TV 2 Play
+  app: true
+  cast: true
+  live: false
+  cats:
+    - tv
+    - movies
+
+- name: Viaplay
+  homepage: https://viaplay.dk/
+  homepage_title: Viaplay
+  app: true
+  cast: true
+  airplay: false
+  live: false
+  cats:
+    - tv
+    - movies
+
+- name: Waoo TV
+  homepage: https://waoo.dk/
+  homepage_title: Waoo TV
+  app: false
+  cast: true
+  live: false
+  cats:
+    - tv
+    - movies
+
+- name: YouSee Tv & Film
+  homepage: https://tv.yousee.dk/
+  homepage_title: YouSee Tv & Film
+  app: true
+  cast: true
+  airplay: false
+  live: false
+  cats:
+    - tv
+    - movies
+
+- name: YouTv
+  homepage: https://youtv.dk/
+  homepage_title: YouTv
+  app: true
+  cast: true
+  live: false
+  cats:
+    - tv
+
+- name: Amazon Prime Video
+  homepage: https://www.primevideo.com/
+  homepage_title: Amazon Prime Video
+  app: true
+  cast: true
+  airplay: "-"
+  note: Ikke alt indhold har danske undertekster
+  cats:
+    - movies
+
+- name: Blockbuster
+  homepage: https://blockbuster.dk/
+  homepage_title: Blockbuster
+  app: true
+  cast: true
+  cats:
+    - movies
+
+- name: Dansk Filmskat
+  homepage: https://www.danskfilmskat.dk/
+  homepage_title: Dansk Filmskat
+  app: false
+  cast: true
+  cats:
+    - movies
+
+- name: Disney+
+  homepage: https://www.disneyplus.com/
+  homepage_title: Disney+
+  app: true
+  cast: true
+  cats:
+    - movies
+
+- name: DR Ramasjang
+  homepage: https://www.dr.dk/ramasjang
+  homepage_title: DR Ramasjang
+  app: false
+  cast: "-"
+  airplay: "-"
+  cats:
+    - movies
+
+- name: DR Ultra
+  homepage: https://www.dr.dk/ultra
+  homepage_title: DR Ultra
+  app: false
+  cast: "-"
+  airplay: "-"
+  cats:
+    - movies
+
+- name: Filmcentralen
+  homepage: https://filmcentralen.dk/
+  homepage_title: Filmcentralen
+  app: false
+  cast: true
+  note: Kræver en chromecast-kompatibel webbrowser
+  cats:
+    - movies
+
+- name: Filmstriben
+  homepage: https://filmstriben.dk/
+  homepage_title: Filmstriben
+  app: false
+  cast: true
+  cats:
+    - movies
+
+- name: Google Play Film
+  homepage: https://play.google.com/movies
+  homepage_title: Google Play Film
+  app: true
+  cast: true
+  cats:
+    - movies
+
+- name: Hayu
+  homepage: https://www.hayu.com/
+  homepage_title: Hayu
+  app: true
+  cast: true
+  note: De store amerikanske reality shows (Ingen danske undertekster)
+  cats:
+    - movies
+
+- name: HBO
+  homepage: https://dk.hbonordic.com/
+  homepage_title: HBO Nordic
+  app: true
+  cast: true
+  cats:
+    - movies
+
+- name: iTunes Movies
+  homepage: https://itunes.apple.com/dk/genre/films/id33
+  homepage_title: iTunes Movies
+  app: false
+  cast: "-"
+  cats:
+    - movies
+
+- name: Min Bio
+  homepage: https://www.minbio.dk/
+  homepage_title: Min Bio
+  app: false
+  cast: true
+  cats:
+    - movies
+
+- name: Mubi
+  homepage: https://mubi.com/
+  homepage_title: Mubi
+  app: true
+  cast: true
+  cats:
+    - movies
+
+- name: Netflix
+  homepage: https://www.netflix.com/
+  homepage_title: Netflix
+  app: true
+  cast: true
+  cats:
+    - movies
+
+- name: Rakuten TV
+  homepage: https://rakuten.tv/
+  homepage_title: Rakuten TV
+  app: false
+  cast: true
+  airplay: "-"
+  cats:
+    - movies
+
+- name: SF Anytime
+  homepage: https://www.sfanytime.com/
+  homepage_title: SF Anytime
+  app: true
+  cast: true
+  airplay: "-"
+  cats:
+    - movies
+
+- name: SF Kids
+  homepage: https://www.sfkids.com/
+  homepage_title: SF Kids
+  app: false
+  cast: true
+  cats:
+    - movies
+
+- name: Viafree
+  homepage: https://www.viafree.dk/
+  homepage_title: Viafree
+  app: true
+  cast: true
+  cats:
+    - movies
+
+- name: YouTube
+  homepage: https://www.youtube.com/
+  homepage_title: YouTube
+  app: true
+  cast: true
+  airplay: true
+  cats:
+    - movies
+
+- name: YouTube Kids
+  homepage: https://www.youtube.com/kids/
+  homepage_title: YouTube Kids
+  app: true
+  cast: true
+  cats:
+    - movies
+
+- name: Paramount+
+  homepage: https://www.paramountplus.com/
+  homepage_title: Paramount+
+  app: true
+  cast: true
+  cats:
+    - movies
+
+- name: Grand Hjemmebio
+  homepage: https://www.grandhjemmebio.dk/
+  homepage_title: Grand Hjemmebio
+  app: false
+  cast: true
+  note: Kræver en chromecast-kompatibel webbrowser
+  cats:
+    - movies
+
+- name: Curiosity Stream
+  homepage: https://curiositystream.com/
+  homepage_title: Curiosity Stream | Stay curious
+  app: true
+  cast: true
+  cats:
+    - movies
+
+- name: Apple Music
+  app: false
+  cast: true
+  cats:
+    - sound
+
+- name: DEEZER
+  app: true
+  cast: true
+  airplay: "-"
+  cats:
+    - sound
+
+- name: DR Radio
+  app: false
+  cast: true
+  cats:
+    - sound
+
+- name: Google Play Musik
+  app: true
+  cast: true
+  cats:
+    - sound
+
+- name: Google Podcasts
+  app: false
+  cast: true
+  cats:
+    - sound
+
+- name: Min Radio Danmark
+  app: true
+  cast: true
+  cats:
+    - sound
+
+- name: Napster
+  app: false
+  cast: true
+  cats:
+    - sound
+
+- name: Spotify
+  app: true
+  cast: true
+  airplay: true
+  cats:
+    - sound
+
+- name: Telmore musik
+  app: false
+  cast: true
+  cats:
+    - sound
+
+- name: TIDAL
+  app: true
+  cast: true
+  cats:
+    - sound
+
+- name: Yousee musik
+  app: false
+  cast: true
+  airplay: true
+  cats:
+    - sound
+
+- name: YouTube Music
+  app: true
+  cast: true
+  cats:
+    - sound
+

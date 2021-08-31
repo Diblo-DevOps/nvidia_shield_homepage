@@ -1,0 +1,1 @@
+{% if include.val == true %}&#10003;{% elsif include.val == false %}&#10005;{% else %}{{ include.val | default: "?" }}{% endif %}

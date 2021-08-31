@@ -1,0 +1,105 @@
+---
+- name: AirPlay/DLNA Receiver (PRO)
+  app: true
+  local_files: "-"
+  network_samba: true
+  network_dlna: true
+  receive_airplay: true
+  receive_dlna: true
+  cats:
+    - local
+
+- name: KODI
+  app: true
+  local_files: true
+  network_samba: true
+  network_dlna: true
+  receive_airplay: true
+  receive_dlna: true
+  cats:
+    - local
+
+- name: PLEX
+  app: true
+  local_files: true
+  network_samba: true
+  network_dlna: true
+  receive_airplay: true
+  receive_dlna: true
+  cats:
+    - local
+
+- name: VLC
+  app: true
+  local_files: true
+  network_samba: true
+  network_dlna: true
+  receive_airplay: "-"
+  receive_dlna: "-"
+  cats:
+    - local
+
+- name: MX Player
+  app: true
+  local_files: true
+  network_samba: "-"
+  network_dlna: "-"
+  receive_airplay: "-"
+  receive_dlna: "-"
+  cats:
+    - local
+
+- name: RetroArch
+  homepage: https://www.retroarch.com/
+  homepage_title: RetroArch
+  app_link: https://play.google.com/store/apps/details?id=com.retroarch
+  app_link_title: RetroArch | Apps i Google Play
+  app: true
+  note: Rækkefølgen af controllerne indstilles på næsten samme måde som med en Wii. Tag den controller, der skal være controller nummer et, og åbn programmet med controlleren. Tag derefter den controller som skal være controller nummer to, og tryk på en knap, osv.
+  cats:
+    - apps
+
+- name: GeForce NOW
+  homepage: https://www.nvidia.com/da-dk/geforce-now/
+  homepage_title: Skybaseret gaming | NVIDIA GeForce NOW
+  app: true
+  note: Kræver en Nvidia konto som er tilmeldt GeForce NOW.
+  cats:
+    - apps
+
+- name: Steam Link
+  homepage: https://store.steampowered.com/app/353380/Steam_Link/?l=danish
+  homepage_title: Steam Link | Steam
+  app: true
+  note: Steam Link kræver at der er forbindelse til et Steam program på eks. en computer med windows. Appen kan ikke kommunikere med controller over WI-FI Direct.
+  cats:
+    - apps
+
+- name: Refresh Rate
+  app_link: https://play.google.com/store/apps/details?id=mobi.bytearray.refreshrate
+  app_link_title: Refresh Rate | Apper på Google Play
+  app: true
+  note: Omlæg tasterne, f.eks. således at startskærmen kan blive kaldt via TV fjernbetjeningen (HDMI-CEC).
+  cats:
+    - apps
+
+- name: Nvidia Game Share
+  app: true
+  cats:
+    - apps
+
+- name: Google Play
+  app: true
+  cats:
+    - apps
+
+- name: Miracast - Wifi Display
+  app: false
+  cats:
+    - apps
+
+- name: Web Browser for Android TV
+  app: true
+  cats:
+    - apps
+

@@ -1,0 +1,62 @@
+---
+- href: "#about_chromecast"
+  anchor: Chromecast
+  cats:
+    - tv
+    - movies
+    - sound
+    - units
+
+- href: "#about_airplay"
+  anchor: AirPlay
+  cats:
+    - tv
+    - movies
+    - sound
+    - local
+    - units
+
+- href: "#about_samba"
+  anchor: SAMBA
+  cats:
+    - local
+
+- href: "#about_dlna"
+  anchor: DLNA
+  cats:
+    - local
+
+- href: https://store.steampowered.com/app/353380/Steam_Link/?l=danish
+  anchor: Steam Link | Steam
+  cats:
+    - controllers
+
+- href: https://forums.geforce.com/default/topic/934542/list-with-compatible-usb-adapters-and-gamepads-for-shield-tv/
+  anchor: List with compatible USB Adapters and Gamepads for Shield TV | NVIDIA GeForce Forums
+  cats:
+    - controllers
+
+- href: https://steamcommunity.com/app/353380/discussions/0/1473096694452098426/
+  anchor: List of List of Steam Link compatible controllers, adapters etc. | Steam Link General Discussions
+  cats:
+    - controllers
+
+- href: https://steamcommunity.com/app/353380/discussions/0/1473096694452098426/
+  anchor: Does the Nvidia controller work with Steam link? | NVIDIA GeForce Forums
+  cats:
+    - controllers
+
+- href: https://forums.geforce.com/default/topic/947370/does-the-nvidia-controller-work-with-steam-link-/
+  anchor: Does the Nvidia controller work with | NVIDIA GeForce Forums
+  cats:
+    - apps
+
+- href: https://www.avxperten.dk/blog/hdmi-cec/
+  anchor: Hvad er HDMI-CEC? Få den komplette guide til HDMI-CEC her! | avXperten
+  cats:
+    - apps
+
+- href: https://helpdeskgeek.com/how-to/how-to-use-vlc-with-chromecast/
+  anchor: How to Use VLC With Chromecast | Help Desk Geek
+  cats:
+    - units

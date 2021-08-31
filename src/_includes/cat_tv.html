@@ -1,0 +1,29 @@
+<table>
+    <tr>
+        <th>&nbsp;</th>
+        <th>App</th>
+        <th>Chromecast <div class="small">(inkl. Apple)</div></th>
+        <th>AirPlay</th>
+        <th>Live Channels <span class="wildcard">*</span></th>
+        <th>Note</th>
+    </tr>
+    {% assign _items = include.items | sort_natural: 'name' %}
+    {% for item in _items %}
+    <tr>
+        <td>
+        {% if item.homepage.size > 0 %}
+            {% include link.html href=item.homepage title=item.homepage_title anchor=item.name %}
+        {% elsif item.app_link.size > 0 %}
+            {% include link.html href=item.app_link title=item.app_link_title anchor=item.name %}
+        {% else %}
+            {{ item.name }}
+        {% endif %}
+        </td>
+        <td>{% include state.html val=item.app %}</td>
+        <td>{% include state.html val=item.cast %}</td>
+        <td>{% include state.html val=item.airplay %}</td>
+        <td>{% include state.html val=item.live %}</td>
+        <td>{{ item.note | default: "&nbsp;" }}</td>
+    </tr>
+    {% endfor %}
+</table>

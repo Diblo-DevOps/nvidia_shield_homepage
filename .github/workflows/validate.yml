@@ -1,0 +1,79 @@
+name: Testing Source
+
+on:
+  push:
+    paths:
+      - 'src/**'
+  workflow_dispatch:
+
+jobs:
+  validate_yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: validate yaml file(s)
+        run: bash ${{ github.workspace }}/ci_cd/validate_yaml.sh
+        env:
+            dir: src
+
+      - name: On failure
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: failure_validate_yaml
+          path: ${{ github.workspace }}
+
+  test_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: build site
+        run: bash ${{ github.workspace }}/ci_cd/build_jekyll.sh
+
+      - name: On failure
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: code_test_build
+          path: ${{ github.workspace }}
+
+  validate_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install Tidy
+        run: sudo apt-get install tidy
+
+      - name: setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: build site
+        run: bash ${{ github.workspace }}/ci_cd/build_jekyll.sh
+
+      - name: validate html file(s)
+        run: bash ${{ github.workspace }}/ci_cd/validate_html.sh
+
+      - name: On failure
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: code_validate_build
+          path: ${{ github.workspace }}

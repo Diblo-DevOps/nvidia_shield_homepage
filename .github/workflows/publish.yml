@@ -1,0 +1,47 @@
+name: Deploy Web Page
+
+on: workflow_dispatch
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install Tidy
+        run: sudo apt-get install tidy
+
+      - name: install Minify
+        run: sudo apt-get install minify
+
+      - name: setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: build site
+        run: bash ${{ github.workspace }}/ci_cd/build_jekyll.sh
+
+      - name: validate html file(s)
+        run: bash ${{ github.workspace }}/ci_cd/validate_html.sh
+
+      - name: minify html code
+        run: bash ${{ github.workspace }}/ci_cd/minify_html.sh
+
+      - name: deploy files
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: diblo.dk
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ${{ github.workspace }}/ci_cd/jekyll/_site/
+          server-dir: ./nvidiashield/
+
+      - name: On failure
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: code
+          path: ${{ github.workspace }}

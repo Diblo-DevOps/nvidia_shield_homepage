@@ -1,0 +1,53 @@
+---
+- name: TGZ-850M
+  homepage: http://www.dgtogether.com/en/default.asp?id=5524
+  wire: "-"
+  wireless: true
+  bluetooth: "-"
+  wi_fi: "-"
+  cats:
+    - controllers
+
+- name: GameSir G3s
+  wire: true
+  wireless: true
+  bluetooth: true
+  wi_fi: "-"
+  cats:
+    - controllers
+
+- name: Logitech F710
+  wire: "-"
+  wireless: true
+  bluetooth: "-"
+  wi_fi: "-"
+  note: Volume knappen virker ikke
+  cats:
+    - controllers
+
+- name: Nvidia Shield Controller
+  wire: true
+  wireless: "-"
+  bluetooth: "-"
+  wi_fi: true
+  note: Steam Link virker kun med ledning
+  cats:
+    - controllers
+
+- name: "Android - Billeder og videoer"
+  app: true
+  note: Cast billder til Chromecast med Google Photos appen og videoer med VLC
+  cats:
+    - units
+
+- name: "iOS - Billeder og videoer"
+  app: true
+  note: "Virker med appen \"AirPlay/DLNA Receiver (PRO)\""
+  cats:
+    - units
+
+- name: Windows - Videoer
+  app: true
+  note: "Cast videoer til Chromecast med VLC. - Se evt <a href=\"https://helpdeskgeek.com/how-to/how-to-use-vlc-with-chromecast/\" title=\"How to Use VLC With Chromecast | Help Desk Geek\" target=\"_blank\" rel=\"noopener\">denne guide</a>"
+  cats:
+    - units

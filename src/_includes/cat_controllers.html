@@ -1,0 +1,29 @@
+<table>
+    <tr>
+        <th>&nbsp;</th>
+        <th>Ledning</th>
+        <th>Trådløs</th>
+        <th>Bluetooth</th>
+        <th>WI-FI Direct</th>
+        <th>Note</th>
+    </tr>
+    {% assign _items = include.items | sort_natural: 'name' %}
+    {% for item in _items %}
+    <tr>
+        <td>
+        {% if item.homepage.size > 0 %}
+            {% include link.html href=item.homepage title=item.homepage_title anchor=item.name %}
+        {% elsif item.app_link.size > 0 %}
+            {% include link.html href=item.app_link title=item.app_link_title anchor=item.name %}
+        {% else %}
+            {{ item.name }}
+        {% endif %}
+        </td>
+        <td>{% include state.html val=item.wire %}</td>
+        <td>{% include state.html val=item.wireless %}</td>
+        <td>{% include state.html val=item.bluetooth %}</td>
+        <td>{% include state.html val=item.wi_fi %}</td>
+        <td>{{ item.note | default: "&nbsp;" }}</td>
+    </tr>
+    {% endfor %}
+</table>

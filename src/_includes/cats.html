@@ -1,0 +1,19 @@
+<div class="box" id="{{ include.cat_id }}">
+    <h2><a href="#{{ include.cat_id }}" onclick="toggleCollapse(this);return false;" itemprop="url">{{ include.title }}</a><svg id="{{ include.cat_id }}_arrow" class="arrow init"><use xlink:href="#arrow"/></svg></h2>
+    <div class="collapse" id="{{ include.cat_id }}_collapse">
+      {% include cat_{{ include.cat_id }}.html items=include.items %}
+
+      {% for item in include.remarks %}
+        <p><span class="wildcard text">{{ item.mark }}</span> {{ item.text }}</p>
+      {% endfor %}
+
+      {% if include.also.size > 0 %}
+        <p>Se også:</p>
+        <ul>
+          {% for item in include.also %}
+            <li>{% include link.html href=item.href title=item.title anchor=item.anchor %}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+</div>

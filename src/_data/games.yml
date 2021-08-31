@@ -1,0 +1,20 @@
+---
+- name: CROSSY ROAD
+  app: true
+  remote_control: true
+  other_controller: "-"
+
+- name: Minion Rush
+  app: true
+  remote_control: true
+  other_controller: "-"
+
+- name: PAC-MAN 256
+  app: true
+  remote_control: true
+  other_controller: "-"
+
+- name: Red Ball 4
+  app: true
+  remote_control: true
+  other_controller: "-"

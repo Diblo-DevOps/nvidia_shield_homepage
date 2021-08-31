@@ -1,0 +1,163 @@
+---
+layout: null
+---
+###########################################################################################
+### Apache Core Features
+###########################################################################################
+
+## Options Directive
+#################################################
+Options -ExecCGI -FollowSymLinks -Includes -IncludesNOEXEC -Indexes -Multiviews +SymLinksIfOwnerMatch
+
+## FileETag Directive
+#################################################
+FileETag None
+
+## AddDefaultCharset Directive
+##  Note: Default charset parameter to be added
+##        when a response content-type is
+##        text/plain or text/html
+#################################################
+AddDefaultCharset utf-8
+
+# Text
+AddCharset utf-8    .txt
+AddCharset utf-8    .htm .html .htmls .shtml .dhtml
+AddCharset utf-8    .css
+AddCharset utf-8    .xml
+AddCharset utf-8    .xslt .xsl
+AddCharset utf-8    .vcf
+AddCharset utf-8    .manifest
+
+# Image
+AddCharset utf-8    .svg
+
+# Application
+AddCharset utf-8    .xls
+AddCharset utf-8    .js
+AddCharset utf-8    .phps
+AddCharset utf-8    .xhtml
+AddCharset utf-8    .rss
+AddCharset utf-8    .json
+AddCharset utf-8    .rdf
+
+## ErrorDocument Directive
+#################################################
+# 404 Not Found
+ErrorDocument 404 /
+
+###########################################################################################
+### Apache Security
+###########################################################################################
+<Files ".*">
+	order allow,deny
+	deny from all
+</Files>
+<Files "*.ini">
+	order allow,deny
+	deny from all
+</Files>
+<Files "*.log">
+	order allow,deny
+	deny from all
+</Files>
+<Files "*.exe">
+	order allow,deny
+	deny from all
+</Files>
+
+###########################################################################################
+### Apache Module mod_dir
+###########################################################################################
+
+## DirectorySlash Directive
+#################################################
+DirectorySlash Off
+
+###########################################################################################
+### Apache Module mod_mime
+###########################################################################################
+
+## AddType Directive
+#################################################
+AddType application/octet-stream		.zip
+AddType application/octet-stream		.rar
+
+###########################################################################################
+### Apache Module mod_deflate
+###########################################################################################
+
+<ifModule mod_deflate.c>
+<ifModule mod_setenvif.c>
+    ## Enabling Compression
+    ##  Note: If an Accept-Encoding is present with a known
+    ##        value, mod_deflate will compress the content
+	#################################################
+	SetOutputFilter DEFLATE
+	SetEnvIfNoCase Accept-Encoding (gzip|deflate) doAgent
+
+	## Setings
+	#################################################
+	SetEnvIfNoCase request_uri \.(php|htm|html|htmls|shtml|dhtml|xml|css|rss|json|rdf|svg)$ gzip=9 cache-enable=mem
+	SetEnvIfNoCase request_uri \.(txt|xslt|xsl|vcf|manifest|js|phps|xhtml)$ gzip=6
+
+	## Excludes
+	#################################################
+	SetEnvIfNoCase request_uri "\.(icon?|jpe?g|png|gif|tiff?|xls|gzip|gz|pdf|zip|rar)$" no-gzip dontVary
+</ifModule>
+</ifModule>
+
+###########################################################################################
+### Apache Module mod_headers
+###########################################################################################
+<ifModule mod_headers.c>
+<ifModule mod_setenvif.c>
+	## Remove headers
+	#################################################
+	Header unset Accept-Ranges
+	Header unset Pragma
+	Header unset ETag
+	Header unset X-Content-Type-Options
+
+	## Make sure proxies don't deliver the wrong content
+	#################################################
+	Header set Vary Accept-Encoding
+	Header append Vary User-Agent env=doAgent
+	Header unset Vary env=dontVary
+
+    ## Security
+    #################################################
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Strict-Transport-Security "max-age=31536000"
+
+    ## Internet Explorer ::: https://stackoverflow.com/a/6771584/678611
+    #################################################
+    BrowserMatch MSIE ie
+    SetEnvIfNoCase request_uri \.(?!htm|html|htmls|shtml|dhtml)$ !ie
+    Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+
+	## Manage web browser cache
+	#################################################
+    <If "%{REQUEST_URI} !~ m#\.(html|htm|php)$#i">
+        ExpiresDefault A31104000
+        Header set Cache-Control "s-maxage=31104000, max-age=31104000, public"
+    </If>
+    <Else>
+        ExpiresDefault A43200
+        Header set Cache-Control "s-maxage=43200, max-age=43200, public"
+    </Else>
+</ifModule>
+</ifModule>
+
+###########################################################################################
+### Mod rewriting
+###########################################################################################
+RewriteEngine On
+RewriteOptions MaxRedirects=10
+RewriteBase /
+
+RewriteCond %{HTTPS} off                          [OR]
+RewriteCond %{HTTP_HOST} !^{{ site.domaine }}$ [NC]
+RewriteRule (.*) {{ site.proto }}://{{ site.domaine }}/$1 [L,R=301]
