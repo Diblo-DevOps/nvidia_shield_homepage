@@ -32,7 +32,7 @@ image: {{ site.image }}
 <meta property="article:author" content="https://www.facebook.com/henrikankersoe"/>
 <meta property="article:published_time" content="2020-01-16T11:00:00+01:00" />
 <meta property="article:modified_time" content="{{ site.time | date: '%Y-%m-%dT%H:%M:%S%z' }}" />
-<meta property="og:image" content="{{ site.url }}{{ page.image }}"/>
+<meta property="og:image" content="{{ site.url }}{{ site.image }}"/>
 <meta property="og:image:width" content="640" />
 <meta property="og:image:height" content="640" />
 <meta property="fb:app_id" content="560520174502127"/>
@@ -42,7 +42,7 @@ image: {{ site.image }}
 <meta name="twitter:creator" content="@Diblo_Dk"/>
 <meta name="twitter:title" content="{{ page.title }}"/>
 <meta name="twitter:description" content="{{ page.description }}"/>
-<meta name="twitter:image" content="{{ site.url }}{{ page.image }}"/>
+<meta name="twitter:image" content="{{ site.url }}{{ site.image }}"/>
 
 <script type="application/ld+json">
 {
@@ -63,7 +63,7 @@ image: {{ site.image }}
     "datePublished": "2020-01-16T11:00:00+01:00",
     "dateModified": "{{ site.time | date: '%Y-%m-%dT%H:%M:%S%z' }}",
     "image": [
-        "{{ site.url }}{{ page.image }}"
+        "{{ site.url }}{{ site.image }}"
     ],
     "sameAs" : [
        "https://twitter.com/diblo_dk",
