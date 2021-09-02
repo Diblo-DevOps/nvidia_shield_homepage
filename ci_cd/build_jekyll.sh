@@ -19,7 +19,7 @@ fi
 
 echo "Setting variables :: gem_dir: ${gem_dir}, dest_dir: ${dest_dir}, config_file: ${config_file}, src_dir: ${src_dir}"
 
-if [ ! -f /bin/bundle ]; then
+if [ ! -f /bin/ruby ]; then
     echo "Ruby is required!"
     exit 1
 fi
