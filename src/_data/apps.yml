@@ -63,7 +63,7 @@
   homepage: https://www.nvidia.com/da-dk/geforce-now/
   homepage_title: Skybaseret gaming | NVIDIA GeForce NOW
   app: true
-  note: Kræver en Nvidia konto som er tilmeldt GeForce NOW.
+  note: Kræver en NVIDIA konto som er tilmeldt GeForce NOW.
   cats:
     - apps
 
@@ -83,7 +83,7 @@
   cats:
     - apps
 
-- name: Nvidia Game Share
+- name: NVIDIA Game Share
   app: true
   cats:
     - apps

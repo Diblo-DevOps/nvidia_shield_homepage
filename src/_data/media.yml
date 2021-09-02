@@ -75,7 +75,7 @@
   app: false
   cast: true
   live: false
-  note: Der er en unofficial app, men det er på eget ansvar.
+  note: Der er en uofficielt app, men det er på eget ansvar.
   cats:
     - tv
     - movies
@@ -438,7 +438,7 @@
   cats:
     - sound
 
-- name: Yousee musik
+- name: YouSee musik
   app: false
   cast: true
   airplay: true

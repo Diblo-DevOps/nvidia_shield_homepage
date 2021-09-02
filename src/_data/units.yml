@@ -25,7 +25,7 @@
   cats:
     - controllers
 
-- name: Nvidia Shield Controller
+- name: NVIDIA Shield Controller
   wire: true
   wireless: "-"
   bluetooth: "-"
