@@ -41,14 +41,10 @@
   cats:
     - controllers
 
-- href: https://steamcommunity.com/app/353380/discussions/0/1473096694452098426/
+- href: https://forums.geforce.com/default/topic/947370/does-the-nvidia-controller-work-with-steam-link-/
   anchor: Does the NVIDIA controller work with Steam link? | NVIDIA GeForce Forums
   cats:
     - controllers
-
-- href: https://forums.geforce.com/default/topic/947370/does-the-nvidia-controller-work-with-steam-link-/
-  anchor: Does the NVIDIA controller work with | NVIDIA GeForce Forums
-  cats:
     - apps
 
 - href: https://www.avxperten.dk/blog/hdmi-cec/
