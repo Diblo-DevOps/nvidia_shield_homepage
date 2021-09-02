@@ -5,6 +5,10 @@ fi
 
 echo "Setting variables :: dir: ${dir}"
 
+if [ ! -f /bin/tidy ]; then
+    apt-get update && apt-get install tidy
+fi
+
 cd "${GITHUB_WORKSPACE}/${dir}"
 
 error=0

@@ -54,9 +54,6 @@ jobs:
   validate_build:
     runs-on: ubuntu-latest
     steps:
-      - name: install Tidy
-        run: sudo apt-get install tidy
-
       - name: setup Ruby
         uses: ruby/setup-ruby@v1
         with:

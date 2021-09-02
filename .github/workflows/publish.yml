@@ -6,12 +6,6 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - name: install Tidy
-        run: sudo apt-get install tidy
-
-      - name: install Minify
-        run: sudo apt-get install minify
-
       - name: setup Ruby
         uses: ruby/setup-ruby@v1
         with:
