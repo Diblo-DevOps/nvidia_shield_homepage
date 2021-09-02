@@ -6,7 +6,7 @@ fi
 echo "Setting variables :: dir: ${dir}"
 
 if [ ! -f /bin/tidy ]; then
-    apt-get update && apt-get install tidy
+    sudo apt-get update && sudo apt-get install tidy || exit 1
 fi
 
 cd "${GITHUB_WORKSPACE}/${dir}"

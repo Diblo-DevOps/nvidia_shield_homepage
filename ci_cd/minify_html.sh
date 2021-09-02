@@ -6,7 +6,7 @@ fi
 echo "Setting variables :: dir: ${dir}"
 
 if [ ! -f /bin/minify ]; then
-    apt-get update && apt-get install minify
+    sudo apt-get update && sudo apt-get install minify || exit 1
 fi
 
 cd "${GITHUB_WORKSPACE}/${dir}"

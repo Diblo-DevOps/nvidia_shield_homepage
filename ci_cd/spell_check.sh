@@ -10,7 +10,7 @@ fi
 echo "Setting variables :: dir: ${dir},  custom_word_list: ${custom_word_list}"
 
 if [ ! -f /bin/aspell ]; then
-    apt-get update && apt-get install aspell aspell-da
+    sudo apt-get update && sudo apt-get install aspell aspell-da || exit 1
 fi
 
 aspell --encoding=utf-8 --lang=da create master "/usr/lib/aspell/custom.rws" < "${GITHUB_WORKSPACE}/${custom_word_list}"
