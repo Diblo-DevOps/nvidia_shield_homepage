@@ -2,8 +2,6 @@ name: Testing Source
 
 on:
   push:
-    paths:
-      - 'src/**'
   workflow_dispatch:
 
 jobs:
