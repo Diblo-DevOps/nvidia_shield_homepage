@@ -5,6 +5,11 @@ fi
 
 echo "Setting variables :: dir: ${dir}"
 
+if [ ! -f /bin/ruby ]; then
+    echo "Ruby is required!"
+    exit 1
+fi
+
 cd "${GITHUB_WORKSPACE}/${dir}"
 
 error=0

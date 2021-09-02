@@ -16,6 +16,11 @@ fi
 
 echo "Setting variables :: dir: ${dir}, branch: ${branch}, token: ${token}"
 
+if [ ! -f /bin/git ]; then
+    echo "git is required!"
+    exit 1
+fi
+
 cd "${GITHUB_WORKSPACE}/${dir}"
 
 touch .nojekyll # No need to have GitHub Pages to run Jekyll
