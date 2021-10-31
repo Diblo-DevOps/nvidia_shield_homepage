@@ -260,9 +260,9 @@
   cats:
     - movies
 
-- name: HBO
-  homepage: https://dk.hbonordic.com/
-  homepage_title: HBO Nordic
+- name: HBO Max
+  homepage: https://www.hbomax.com/
+  homepage_title: HBO  Max
   app: true
   cast: true
   cats:
