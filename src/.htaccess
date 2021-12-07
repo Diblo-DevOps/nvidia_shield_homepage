@@ -99,11 +99,11 @@ AddType application/octet-stream		.rar
 	## Setings
 	#################################################
 	SetEnvIfNoCase request_uri \.(php|htm|html|htmls|shtml|dhtml|xml|css|rss|json|rdf|svg)$ gzip=9 cache-enable=mem
-	SetEnvIfNoCase request_uri \.(txt|xslt|xsl|vcf|manifest|js|phps|xhtml)$ gzip=6
+	SetEnvIfNoCase request_uri \.(icon?|txt|xslt|xsl|vcf|manifest|js|phps|xhtml)$ gzip=6
 
 	## Excludes
 	#################################################
-	SetEnvIfNoCase request_uri "\.(icon?|jpe?g|png|gif|tiff?|xls|gzip|gz|pdf|zip|rar)$" no-gzip dontVary
+	SetEnvIfNoCase request_uri "\.(jpe?g|png|gif|tiff?|xls|gzip|gz|pdf|zip|rar)$" no-gzip dontVary
 </ifModule>
 </ifModule>
 
